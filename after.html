@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Spotify Hit Predictor
+        </title>
+        <style>
+            .container{
+                padding: 25px;
+                background-color: rgb(17, 229, 17);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="container">
+                <h1>
+                    Prediction
+                </h1>
+                <form action="{{url_for('index')}}">
+                    {{ prediction_text }}
+                    <br>
+                    <br>
+                    <input type="submit" class="btn btn-primary btn-block btn-Large" value="Home" />
+                </form>
+            </div>
+        </center>
+    </body>
+</html>

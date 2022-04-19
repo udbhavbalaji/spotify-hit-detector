@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Spotify Hit Predictor
+        </title>
+        <style>
+            .container{
+                padding: 25px;
+                background-color: rgb(74, 233, 0);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="container">
+                <h1>
+                    Predicting whether a song on Spotify has the potential to be a Hit!
+                </h1>
+                <form action="{{url_for('predict')}}"method="get">
+                    <input type="text" id="song_url" name="song_url" placeholder="Please Enter the URL of the Song" required="required" /><br>
+                    <input type="submit" class="btn btn-primary btn-block btn-Large" value="Predict" />                
+                    <br>
+                    <br>
+                    {{ prediction_text }}
+                </form>
+            </div>
+        </center>
+    </body>
+</html>
